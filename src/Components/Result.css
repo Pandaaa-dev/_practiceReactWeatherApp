@@ -1,0 +1,26 @@
+.Result {
+    width: 80vw;
+    height: 15rem;
+    margin-top: 2rem;
+    padding: 1rem;
+    font-family: monospace;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.ResultTitle {
+  font-size: 3.5rem;
+  /* align-self: center; */
+}
+
+.Type {
+    align-self: center;
+    font-size: 2rem;
+}
+.Temperature {
+    color: red;
+    font-weight: lighter;
+    font-size: 1.5rem;
+    text-align: right;  
+}

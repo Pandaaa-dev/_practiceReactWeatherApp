@@ -1,8 +1,0 @@
-const Hero = props => {    
-
-    return (
-        <>
-            
-        </>
-    )
-}

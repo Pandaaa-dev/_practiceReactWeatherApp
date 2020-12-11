@@ -1,19 +1,21 @@
 import Hero from './Components/Hero'
-import Searchbar from './Components/Searchbar'
 import './App.css'
 import SearchBar from './Components/Searchbar'
 import Result from './Components/Result'
-import { Paper } from '@material-ui/core'
+// import Autocomplete from './Components/Autocomplete'
 
-function App() {
+const App = () => {
+  const arr = [{Title: 'New York', Type: 'Pretty fucked mayn', Temp: '49C'}, {Title: 'New York', Type: 'Pretty fucked mayn', Temp: '49C'}]
   return (
     <div className="App">
       <Hero>
     <SearchBar />
       </Hero>
-      <Result result = {{Title: 'New York'}} />
+      <Result result = {arr} />
     </div>
-  );
+
+  )
 }
+
 
 export default App;

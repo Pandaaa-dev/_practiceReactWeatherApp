@@ -1,5 +1,5 @@
+import Intro from './Intro'
 import './Hero.css'
-import { Button } from '@material-ui/core';
 
 
 const Hero = props => {    
@@ -8,6 +8,7 @@ const Hero = props => {
         <>
             <div className='Hero'>
                 <div className='Backdrop'>
+                <Intro />       
                 {props.children}    
                 </div>
             </div>
