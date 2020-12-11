@@ -1,0 +1,20 @@
+.Input{
+    opacity: 1;
+    width: 60%;
+    margin: 0 auto;
+    background-color: white;
+    
+}
+.icon {
+    font-size: large;
+
+}
+span {
+    font-size:large;
+}
+.IconContainer {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
