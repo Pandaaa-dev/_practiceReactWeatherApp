@@ -1,22 +1,32 @@
 import {Paper} from '@material-ui/core'
+import { useEffect, useState } from 'react'
 
 import './Result.css'
 
 
 const Result = props => {
-    const resultComponent = ( <>
+    const [array, setArray] = useState([])
+    const resultComponent = () => {
+        if(array.length == 0) return
+       return ( <>
         <div className = 'resultContainer'>
-                {props.result.map( (res, i) => {
+                {array.map( (res, i) => {
+                    console.log('THIS IS ME')    
                 return(
                     <Paper elevation = {3} className = 'Result' key= {i}>
                     <h1 className='ResultTitle'> {res.Title}</h1>
                     <p className= 'Type'>{res.Type}</p> 
-                    <p className= 'Temperature'> {res.Temp}</p> 
+                    <p className= 'Temperature'> {res.Temperature}</p> 
                     </Paper> )
                 })}
          </div>
         </>
     )
+    } 
+    useEffect(() => {
+    console.log(props.result)
+    setArray(props.result)
+    }, [props.result])
 
     const ifNoResult = ( <div className = 'noResultContainer' >
         <h1> Sorry!You still havent asked
@@ -24,7 +34,7 @@ const Result = props => {
         </div>
     )
     return ( <> 
-    { props.result.length > 0 ? resultComponent : ifNoResult } 
+    { array.length != 0 ? resultComponent() : ifNoResult } 
     </>
     )
 }
