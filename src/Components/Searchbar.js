@@ -103,7 +103,7 @@ const SearchBar = props => {
         fetch("https://community-open-weather-map.p.rapidapi.com/weather?q=" + value + "%2Cuk&id=" + id + "&units=metric", {
 	"method": "GET",
 	"headers": {
-		"x-rapidapi-key": "a08e0e9bd5msh0295a35dd2bfe75p123defjsnb8ad5aeba384",
+		"x-rapidapi-key": api_key,
 		"x-rapidapi-host": "community-open-weather-map.p.rapidapi.com"
 	}
     })
